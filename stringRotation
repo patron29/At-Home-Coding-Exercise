@@ -1,0 +1,19 @@
+package com.nicko;
+
+public class StringRotation {
+
+    public static void main(String[] args) {
+        String str = "MyString";
+
+        char[] lastArray = str.toCharArray();
+
+        char lastChar = lastArray[lastArray.length - 1];
+        char secondLastChar = lastArray[lastArray.length - 2];
+
+        System.out.println(secondLastChar + "" + lastChar + "" + lastTwoChar(str, 2));
+    }
+
+    public static String lastTwoChar(String str, int chars) {
+        return str.substring(0, str.length() - chars);
+    }
+}
