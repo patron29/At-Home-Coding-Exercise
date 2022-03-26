@@ -1,0 +1,32 @@
+package com.nicko;
+
+import java.util.*;
+import java.lang.Integer;
+
+public class AboveBelow {
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 5, 2, 1, 10};
+        int comparison = 6;
+
+        System.out.println("above: " + above(numbers, comparison) + " below: " + below(numbers, comparison));
+    }
+
+    public static int above(int[] numbers, int comparison) {
+        int numAbove = 0;
+        for (int i = 0; i < numbers.length; i++)
+            if (numbers[i] >= comparison) {
+                numAbove++;
+            }
+        return numAbove;
+    }
+
+    public static int below(int[] numbers, int comparison) {
+        int numBelow = 0;
+        for (int i = 0; i < numbers.length; i++)
+            if (numbers[i] <= comparison) {
+                numBelow++;
+            }
+        return numBelow;
+    }
+}
